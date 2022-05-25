@@ -26,17 +26,31 @@ command creates a news app inside heyapp application project
 `python3.8 manage.py runserver`
 
 # rabbit holes
-1. `from django.conf.urls import url, include
-ImportError: cannot import name 'url' from 'django.conf.urls`
+# 1. `ImportError: cannot import name 'url' from 'django.conf.urls`
 
+   solution
+    import from django.urls instead
 `from django.urls import include, re_path`
-
+    
+    ie
 `from myapp.views import home`
-
+    include the imported function in the urlpatterns list
 `urlpatterns = [`
     `re_path(r'^$', home, name='home'),`
     `re_path(r'^myapp/', include('myapp.urls'),`
 `]`
+
+# 2. `TypeError: __init__() missing 1 required positional argument: 'on_delete'`
+This is a testing error in the case of creating models
+
+  solution
+in the models file, add the following command in the class with the foreignkey when creating
+model relationships
+ `on_delete=models.CASCADE`
+ 
+ ie: 
+    `editor = models.ForeignKey(Editor, on_delete=models.CASCADE)`
+
 
 
 
