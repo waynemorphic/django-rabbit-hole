@@ -26,7 +26,7 @@ command creates a news app inside heyapp application project
 `python3.8 manage.py runserver`
 
 # rabbit holes
-# 1. `ImportError: cannot import name 'url' from 'django.conf.urls`
+1. `ImportError: cannot import name 'url' from 'django.conf.urls`
 
    solution
     import from django.urls instead
@@ -40,7 +40,7 @@ command creates a news app inside heyapp application project
     `re_path(r'^myapp/', include('myapp.urls'),`
 `]`
 
-# 2. `TypeError: __init__() missing 1 required positional argument: 'on_delete'`
+2. `TypeError: __init__() missing 1 required positional argument: 'on_delete'`
 This is a testing error in the case of creating models
 
   solution
@@ -51,14 +51,14 @@ model relationships
  ie: 
     `editor = models.ForeignKey(Editor, on_delete=models.CASCADE)`
     
-# 3. `It is impossible to add a non-nullable field 'article_image' to article without specifying a default. It is impossible to add a non-nullable field 'article_image' to article without specifying a default`
+3. `It is impossible to add a non-nullable field 'article_image' to article without specifying a default. It is impossible to add a non-nullable field 'article_image' to article without specifying a default`
 There is no default provided in the models class for the image column
 
    solution
    `article_image = models.ImageField(upload_to = 'articles/', default = '')`
    default can either be an empty string or blank can be True
    `
-# 4 `Django DoesNotExist is not defined`
+4 `Django DoesNotExist is not defined`
 The DoesNotExist class requires a model class to be linked to it so as to query for the existence of data for that class in the database
 
    solution
