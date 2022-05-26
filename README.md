@@ -58,7 +58,11 @@ There is no default provided in the models class for the image column
    `article_image = models.ImageField(upload_to = 'articles/', default = '')`
    default can either be an empty string or blank can be True
    `
+# 4 `Django DoesNotExist is not defined`
+The DoesNotExist class requires a model class to be linked to it so as to query for the existence of data for that class in the database
 
+   solution
+   `<Your Model class>.DoesNotExist`
 
 
 
