@@ -50,6 +50,14 @@ model relationships
  
  ie: 
     `editor = models.ForeignKey(Editor, on_delete=models.CASCADE)`
+    
+# 3. `It is impossible to add a non-nullable field 'article_image' to article without specifying a default. It is impossible to add a non-nullable field 'article_image' to article without specifying a default`
+There is no default provided in the models class for the image column
+
+   solution
+   `article_image = models.ImageField(upload_to = 'articles/', default = '')`
+   default can either be an empty string or blank can be True
+   `
 
 
 
