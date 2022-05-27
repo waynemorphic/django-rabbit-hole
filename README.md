@@ -16,7 +16,7 @@ Notes on creating a django app and solutions for errors while developing my djan
 `pip install django`
 
 ## while in the virtual environment and the application containing folder in your code editor
-`django-admin strartproject heyapp .
+`django-admin startproject heyapp .`
 command creates a hey app application project with a simplified folder structure
 
 `django-admin startapp news`
