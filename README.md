@@ -64,5 +64,7 @@ The DoesNotExist class requires a model class to be linked to it so as to query 
    solution
    `<Your Model class>.DoesNotExist`
 
+   # Installing fontawesome
+   `pip install fontawesomefree`
 
 
